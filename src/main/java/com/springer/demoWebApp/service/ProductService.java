@@ -4,8 +4,6 @@ import com.springer.demoWebApp.model.Product;
 import com.springer.demoWebApp.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
