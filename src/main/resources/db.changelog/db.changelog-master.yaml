@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: classpath:db.changelog/changes/create_user_table.yaml
+  - include:
+      file: classpath:db.changelog/changes/create_product_table.yaml

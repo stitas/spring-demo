@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-table
+      author: monstras
+      changes:
+        - sql: |
+            CREATE TABLE "PRODUCT"
+        - sql: |
+            ALTER TABLE "PRODUCT" ADD id IDENTITY PRIMARY KEY NOT NULL;
+        - sql: |
+            ALTER TABLE "PRODUCT" ADD title VARCHAR(50) NOT NULL;
+        - sql: |
+            ALTER TABLE "PRODUCT" ADD price NUMERIC(10,2);
+        - sql: |
+            ALTER TABLE "PRODUCT" ADD created_at DATETIME DEFAULT CURRENT_TIMESTAMP;
+        - sql: |
+            INSERT INTO "PRODUCT" (title, price) VALUES ('Phone', 899.99);
+        - sql: |
+            INSERT INTO "PRODUCT" (title, price) VALUES ('Laptop', 1281.99);
+      rollback: |
+        DROP TABLE "PRODUCT";

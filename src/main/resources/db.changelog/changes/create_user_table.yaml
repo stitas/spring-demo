@@ -4,12 +4,12 @@ databaseChangeLog:
       author: monstras
       changes:
         - sql: |
-            CREATE TABLE "user"
+            CREATE TABLE "USER"
         - sql: |
-            ALTER TABLE "user" ADD id INT PRIMARY KEY NOT NULL;
+            ALTER TABLE "USER" ADD id INT PRIMARY KEY NOT NULL;
         - sql: |
-            ALTER TABLE "user" ADD username VARCHAR(50) NOT NULL;
+            ALTER TABLE "USER" ADD username VARCHAR(50) NOT NULL;
         - sql: |
-            ALTER TABLE "user" ADD email VARCHAR(50);
+            ALTER TABLE "USER" ADD email VARCHAR(50);
         - sql: |
-            ALTER TABLE "user" ADD created_at DATETIME DEFAULT CURRENT_TIMESTAMP;
+            ALTER TABLE "USER" ADD created_at DATETIME DEFAULT CURRENT_TIMESTAMP;

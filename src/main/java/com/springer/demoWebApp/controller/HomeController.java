@@ -1,5 +1,6 @@
 package com.springer.demoWebApp.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
     @RequestMapping("/")
-    public String greet() {
-        return "Hello world!";
+    public String greet(HttpServletRequest request) {
+        return "Hello world!\n" + request.getRequestedSessionId();
     }
 }
